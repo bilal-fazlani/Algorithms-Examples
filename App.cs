@@ -5,6 +5,6 @@ namespace Arrays
     public class App
     {
         [SubCommand]
-        public Arrays Arrays { get; set; }
+        public Algorithms.Arrays Arrays { get; set; }
     }
 }
