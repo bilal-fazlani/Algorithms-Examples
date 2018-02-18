@@ -13,4 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Algorithms.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="2.Sorring" />
+  </ItemGroup>
 </Project>
