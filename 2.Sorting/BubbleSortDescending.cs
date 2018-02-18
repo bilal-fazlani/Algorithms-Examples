@@ -2,7 +2,7 @@
 {
     public class BubbleSortDescending : ISort
     {
-        public void Sort(int[] values)
+        public int[] Sort(int[] values)
         {
             /*
              * PSEUDOCODE - BUBBLE SORT DESCENDING
@@ -29,6 +29,8 @@
                     }
                 }
             } while (swappedAtLeastOnce);
+
+            return values;
         }
 
         private bool IsSwapRequired(int[] values, int position1, int position2)

@@ -2,20 +2,18 @@
 {
     public class BubbleSort :ISort
     {
-        public void Sort(int[] values)
+        public int[] Sort(int[] values)
         {
             /*
              * PSEUDOCODE - BUBBLE SORT
-             * -------------------------
              *
-             * 
              * LOOP
-             *     SET swapped = false
-             *     FOR i = 0 to lenth-1
-             *         IF SWAP required
-             *             SWAP
-             *             SET swapped = true
-             * WHILE swapped == true
+             *     SET swappedAtLeastOnce = false
+             *     FOR(i:0  --> i<len-1)
+             *         if(swap required)
+             *             swap()
+             *             SET swappedAtLeastOnce true
+             * WHILE swappedAtLeastOnce == true
              */
             
             int length = values.Length;
@@ -34,6 +32,8 @@
                     }
                 }
             } while (swappedAtLeastOnce);
+
+            return values;
         }
 
         private static bool SwapRequired(int[] values, int position1, int position2)
