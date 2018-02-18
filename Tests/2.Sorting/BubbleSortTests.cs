@@ -24,7 +24,7 @@ namespace Tests._2.Sorting
             values.Should().BeInAscendingOrder();
         }
         
-        [Fact(Skip = "not implemented")]
+        [Fact]
         public void CanSortDescending()
         {
             int[] values = {3, 1, 7, 10, 11, 5, 0, 4, 1, 9};
