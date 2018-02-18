@@ -5,33 +5,33 @@ using Xunit.Abstractions;
 
 namespace Tests._2.Sorting
 {
-    public class BubbleSortTests
+    public class InsertionSortTests
     {
         private readonly ITestOutputHelper _testOutputHelper;
 
-        public BubbleSortTests(ITestOutputHelper testOutputHelper)
+        public InsertionSortTests(ITestOutputHelper testOutputHelper)
         {
             _testOutputHelper = testOutputHelper;
         }
 
         [Fact]
-        public void CanSort()
+        public void CanSortUsingWhileLoop()
         {
             int[] values = {3, 1, 7, 10, 11, 5, 0, 4, 1, 9};
             _testOutputHelper.WriteLine("before: " + values.ToCommaSeparatedString());
-            new BubbleSort().Sort(values);
+            new InsertionSort().SortUsingWhileLoop(values);
             _testOutputHelper.WriteLine("after: " + values.ToCommaSeparatedString());
             values.Should().BeInAscendingOrder();
         }
 
         [Fact]
-        public void CanSortDescending()
+        public void CanSortUsingForLoop()
         {
             int[] values = {3, 1, 7, 10, 11, 5, 0, 4, 1, 9};
             _testOutputHelper.WriteLine("before: " + values.ToCommaSeparatedString());
-            new BubbleSortDescending().Sort(values);
+            new InsertionSort().SortUsingForLoop(values);
             _testOutputHelper.WriteLine("after: " + values.ToCommaSeparatedString());
-            values.Should().BeInDescendingOrder();
+            values.Should().BeInAscendingOrder();
         }
     }
 }

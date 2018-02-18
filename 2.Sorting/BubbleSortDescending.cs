@@ -1,6 +1,6 @@
 ﻿namespace Algorithms._2.Sorting
 {
-    public class BubbleSortDescending : ISort
+    public class BubbleSortDescending
     {
         public int[] Sort(int[] values)
         {
@@ -24,7 +24,7 @@
                 {
                     if (IsSwapRequired(values, i, i + 1))
                     {
-                        Swap(values, i, i + 1);
+                        values.SwapValues(i, i + 1);
                         swappedAtLeastOnce = true;
                     }
                 }
@@ -33,17 +33,16 @@
             return values;
         }
 
+        /// <summary>
+        /// Only this method logic is different in ascending and descending
+        /// </summary>
+        /// <param name="values"></param>
+        /// <param name="position1"></param>
+        /// <param name="position2"></param>
+        /// <returns></returns>
         private bool IsSwapRequired(int[] values, int position1, int position2)
         {
             return values[position1] < values[position2];
-        }
-        
-        private void Swap(int[] values, int position1, int position2)
-        {
-            int position1Value = values[position1];
-
-            values[position1] = values[position2];
-            values[position2] = position1Value;
         }
     }
 }

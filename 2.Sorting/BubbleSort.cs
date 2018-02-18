@@ -1,6 +1,9 @@
 ﻿namespace Algorithms._2.Sorting
 {
-    public class BubbleSort :ISort
+    /// <summary>
+    /// Complexity - O(n)^2
+    /// </summary>
+    public class BubbleSort
     {
         public int[] Sort(int[] values)
         {
@@ -27,7 +30,7 @@
                 {
                     if (SwapRequired(values, i, i + 1))
                     {
-                        Swap(values, i, i + 1);
+                        values.SwapValues(i, i + 1);
                         swappedAtLeastOnce = true;
                     }
                 }
@@ -39,13 +42,6 @@
         private static bool SwapRequired(int[] values, int position1, int position2)
         {
             return values[position1] > values[position2];
-        }
-        
-        private static void Swap(int[]values, int position1, int position2)
-        {
-            int valueAtPosition1 = values[position1];
-            values[position1] = values[position2];
-            values[position2] = valueAtPosition1;
         }
     }
 }
