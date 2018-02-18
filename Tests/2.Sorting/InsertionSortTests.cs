@@ -33,5 +33,15 @@ namespace Tests._2.Sorting
             _testOutputHelper.WriteLine("after: " + values.ToCommaSeparatedString());
             values.Should().BeInAscendingOrder();
         }
+        
+        [Fact]
+        public void CanSortDescendingUsingWhileLoop()
+        {
+            int[] values = {3, 1, 7, 10, 11, 5, 0, 4, 1, 9};
+            _testOutputHelper.WriteLine("before: " + values.ToCommaSeparatedString());
+            new InsertionSortDescending().SortDescending(values);
+            _testOutputHelper.WriteLine("after: " + values.ToCommaSeparatedString());
+            values.Should().BeInDescendingOrder();
+        }
     }
 }

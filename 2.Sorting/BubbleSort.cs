@@ -5,7 +5,7 @@
     /// </summary>
     public class BubbleSort
     {
-        public int[] Sort(int[] values)
+        public void Sort(int[] values)
         {
             /*
              * PSEUDOCODE - BUBBLE SORT
@@ -35,8 +35,6 @@
                     }
                 }
             } while (swappedAtLeastOnce);
-
-            return values;
         }
 
         private static bool SwapRequired(int[] values, int position1, int position2)

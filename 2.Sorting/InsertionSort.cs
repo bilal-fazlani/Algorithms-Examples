@@ -2,7 +2,7 @@
 {
     public class InsertionSort
     {
-        public int[] SortUsingForLoop(int[] values)
+        public void SortUsingForLoop(int[] values)
         {
             /*
              * PSEUDOCODE - INSERTION SORT - FOR LOOP
@@ -31,11 +31,9 @@
                     }
                 }
             }
-
-            return values;
         }
 
-        public int[] SortUsingWhileLoop(int[] values)
+        public void SortUsingWhileLoop(int[] values)
         {
             /*
              * PSEUDOCODE - INSERTION SORT - WHILE
@@ -61,8 +59,6 @@
                     }
                 }
             }
-            
-            return values;
         }
     }
 }
