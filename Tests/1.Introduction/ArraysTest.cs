@@ -1,8 +1,8 @@
-﻿using Algorithms;
+﻿using Algorithms._1.Introduction;
 using FluentAssertions;
 using Xunit;
 
-namespace Tests
+namespace Tests._1.Introduction
 {
     public class ArraysTest
     {

@@ -1,8 +1,8 @@
-using System;
 using FluentAssertions;
 using Xunit;
+using Math = Algorithms._1.Introduction.Math;
 
-namespace Tests
+namespace Tests._1.Introduction
 {
     public class MathPowerTest
     {
@@ -17,7 +17,7 @@ namespace Tests
         [InlineData(1, 0, 1)]
         public void TestV2(int baseNumber, int exponent, int expectedResult)
         {
-            Algorithms.Math math = new Algorithms.Math();
+            Math math = new Math();
             math.PowerV2(baseNumber, exponent).Should().Be( expectedResult);
         }
         
@@ -32,7 +32,7 @@ namespace Tests
         [InlineData(1, 0, 1)]
         public void TestV1(int baseNumber, int exponent, int expectedResult)
         {
-            Algorithms.Math math = new Algorithms.Math();
+            Math math = new Math();
             math.PowerV1(baseNumber, exponent).Should().Be( expectedResult);
         }
     }

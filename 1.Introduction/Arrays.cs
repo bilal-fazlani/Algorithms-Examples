@@ -1,5 +1,5 @@
 ﻿
-namespace Algorithms
+namespace Algorithms._1.Introduction
 {
     public class Arrays
     {
