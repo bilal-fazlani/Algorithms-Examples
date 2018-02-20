@@ -20,7 +20,7 @@ namespace Algorithms._3.Searching
                 return middle;
             }
 
-            if (right - left <= 0)
+            if (right <= left)
             {
                 return -1;
             }
