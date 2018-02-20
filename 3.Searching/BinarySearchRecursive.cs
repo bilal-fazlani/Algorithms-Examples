@@ -20,19 +20,17 @@ namespace Algorithms._3.Searching
                 return middle;
             }
 
-            if (right <= left)
+            if (right > left)
             {
-                return -1;
-            }
+                if (values[middle] < search)
+                {
+                    return Search(values, middle + 1, right, search);
+                }
             
-            if (values[middle] < search)
-            {
-                return Search(values, middle + 1, right, search);
-            }
-            
-            if(values[middle] > search)
-            {
-                return Search(values, left, middle - 1 , search);
+                if(values[middle] > search)
+                {
+                    return Search(values, left, middle - 1 , search);
+                }
             }
 
             return -1;
