@@ -1,6 +1,6 @@
 ﻿namespace Algorithms._2.Sorting
 {
-    public class InserttionSort
+    public class InsertionSort: ISortingAlgorithm
     {
         public void SortAscending(int[] values)
         {

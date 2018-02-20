@@ -1,6 +1,6 @@
 ﻿namespace Algorithms._2.Sorting
 {
-    public class BubbleSort
+    public class BubbleSort : ISortingAlgorithm
     {
         public void SortAscending(int[] values)
         {
