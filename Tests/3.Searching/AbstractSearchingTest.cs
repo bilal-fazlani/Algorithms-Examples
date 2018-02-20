@@ -20,6 +20,7 @@ namespace Tests._3.Searching
         [InlineData(200, 9)]
         [InlineData(0, 0)]
         [InlineData(8, 4)]
+        [InlineData(201, 10)]
         [InlineData(400, -1)]
         [InlineData(105, -1)]
         [InlineData(-5, -1)]
