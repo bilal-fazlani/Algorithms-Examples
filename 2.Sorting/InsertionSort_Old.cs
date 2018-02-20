@@ -1,6 +1,6 @@
 ﻿namespace Algorithms._2.Sorting
 {
-    public class InsertionSort
+    public class InsertionSort_Old
     {
         public void SortUsingForLoop(int[] values)
         {

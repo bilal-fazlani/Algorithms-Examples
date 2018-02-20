@@ -1,45 +1,41 @@
 ﻿namespace Algorithms._2.Sorting
 {
-    /// <summary>
-    /// Complexity - O(n)^2
-    /// </summary>
     public class BubbleSort
     {
-        public void Sort(int[] values)
+        public void SortAscending(int[] values)
         {
-            /*
-             * PSEUDOCODE - BUBBLE SORT
-             *
-             * LOOP
-             *     SET swappedAtLeastOnce = false
-             *     FOR(i:0  --> i<len-1)
-             *         if(swap required)
-             *             swap()
-             *             SET swappedAtLeastOnce true
-             * WHILE swappedAtLeastOnce == true
-             */
-            
-            int length = values.Length;
-
-            bool swappedAtLeastOnce = false;
-            
+            bool swapped;
             do
             {
-                swappedAtLeastOnce = false;
-                for (int i = 0; i < length - 1; i++)
+                swapped = false;
+                for (int i = 0; i < values.Length-1; i++)
                 {
-                    if (SwapRequired(values, i, i + 1))
+                    if (values[i] > values[i + 1])
                     {
-                        values.SwapValues(i, i + 1);
-                        swappedAtLeastOnce = true;
+                        values.SwapValues(i, i +1);
+                        swapped = true;
                     }
                 }
-            } while (swappedAtLeastOnce);
-        }
 
-        private static bool SwapRequired(int[] values, int position1, int position2)
+            } while (swapped);
+        }
+        
+        public void SortDescending(int[] values)
         {
-            return values[position1] > values[position2];
+            bool swapped;
+            do
+            {
+                swapped = false;
+                for (int i = 0; i < values.Length-1; i++)
+                {
+                    if (values[i] < values[i + 1])
+                    {
+                        values.SwapValues(i, i +1);
+                        swapped = true;
+                    }
+                }
+
+            } while (swapped);
         }
     }
 }

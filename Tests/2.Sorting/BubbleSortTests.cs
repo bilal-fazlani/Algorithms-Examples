@@ -8,18 +8,20 @@ namespace Tests._2.Sorting
     public class BubbleSortTests
     {
         private readonly ITestOutputHelper _testOutputHelper;
+        private readonly BubbleSort _bubbleSort;
 
         public BubbleSortTests(ITestOutputHelper testOutputHelper)
         {
             _testOutputHelper = testOutputHelper;
+            _bubbleSort = new BubbleSort();
         }
 
         [Fact]
-        public void CanSort()
+        public void CanSortAscending()
         {
             int[] values = {3, 1, 7, 10, 11, 5, 0, 4, 1, 9};
             _testOutputHelper.WriteLine("before: " + values.ToCommaSeparatedString());
-            new BubbleSort().Sort(values);
+            _bubbleSort.SortAscending(values);
             _testOutputHelper.WriteLine("after: " + values.ToCommaSeparatedString());
             values.Should().BeInAscendingOrder();
         }
@@ -29,7 +31,7 @@ namespace Tests._2.Sorting
         {
             int[] values = {3, 1, 7, 10, 11, 5, 0, 4, 1, 9};
             _testOutputHelper.WriteLine("before: " + values.ToCommaSeparatedString());
-            new BubbleSortDescending().Sort(values);
+            _bubbleSort.SortDescending(values);
             _testOutputHelper.WriteLine("after: " + values.ToCommaSeparatedString());
             values.Should().BeInDescendingOrder();
         }
