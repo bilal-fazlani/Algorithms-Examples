@@ -7,28 +7,50 @@ namespace Algorithms._2.Sorting
         {
             for (int i = 0; i < values.Length; i++)
             {
-                for (int j = i+1; j < values.Length; j++)
+                values.SwapValues(i, FindIndexOfMin(values, i, values.Length-1));
+            }
+        }
+
+        private int FindIndexOfMin(int[] values, int start, int end)
+        {
+            int min = values[start];
+            int minIndex = start;
+            
+            for (int i = start; i <= end; i++)
+            {
+                if (values[i] < min)
                 {
-                    if (values[i] > values[j])
-                    {
-                        values.SwapValues(i, j);
-                    }
+                    min = values[i];
+                    minIndex = i;
                 }
             }
+
+            return minIndex;
         }
 
         public void SortDescending(int[] values)
         {
             for (int i = 0; i < values.Length; i++)
             {
-                for (int j = i + 1; j < values.Length; j++)
+                values.SwapValues(i, FindIndexOfMax(values, i, values.Length-1));
+            }
+        }
+
+        private int FindIndexOfMax(int[] values, int start, int end)
+        {
+            var maxLocation = start;
+            var maxValue = values[start];
+            
+            for (int i = start; i <= end; i++)
+            {
+                if (values[i] > maxValue)
                 {
-                    if (values[i] < values[j])
-                    {
-                        values.SwapValues(i, j);
-                    }
+                    maxLocation = i;
+                    maxValue = values[i];
                 }
             }
+
+            return maxLocation;
         }
     }
 }
