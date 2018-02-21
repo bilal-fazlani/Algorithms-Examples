@@ -13,15 +13,15 @@ namespace Algorithms._3.Searching
 
         private int Search(int[] values, int left, int right, int search)
         {
-            int middle = (left + right) / 2;
-
-            if (values[middle] == search)
+            if (right >= left)
             {
-                return middle;
-            }
-
-            if (right > left)
-            {
+                int middle = (left + right) / 2;
+    
+                if (values[middle] == search)
+                {
+                    return middle;
+                }
+            
                 if (values[middle] < search)
                 {
                     return Search(values, middle + 1, right, search);
